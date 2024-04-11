@@ -21,9 +21,19 @@ exponent(5, 5); // 3125
 ***********************************************************************/
 
 function exponent(num, power) {
+    debugger
 // Base Case
-
-
+if (power === 0) {
+    return num;
+} else {
+    if (num > 0) {
+         num =  num * num 
+       return exponent(num, power - 1)
+    } else {
+         num = (1 / num) * (1 / num) 
+         return exponent(num, power + 1)
+    }
+}
 
 }
   
