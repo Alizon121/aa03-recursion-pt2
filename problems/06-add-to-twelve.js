@@ -14,9 +14,23 @@ addToTwelve([1]); // false
 
 
 function addToTwelve(arr) {
-  // Your code here 
+// Base Case
+if (arr.length === 1) {
+return false
+}
+else {
+if (arr[0] + arr[1] === 12) {
+return true
+} else {
+return addToTwelve(arr.slice(1))
+}
 }
 
+}
+
+
+console.log(addToTwelve([1, 3, 4, 7, 5])); // true
+// console.log(addToTwelve([1, 3, 4, 7, 6])); // false
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

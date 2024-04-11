@@ -11,13 +11,20 @@ reverse("q"); // "q"
 reverse("id"); // "di"
 reverse(""); // ""
 ***********************************************************************/
-
-
 function reverse(str) {
-  // Your code here 
+// Base Case
+if (str.length === 0) {
+  return ""
+} else {
+// Recursive Step
+return str[str.length-1] + reverse(str.slice(0,str.length-1))
+  // Recursive Case
 }
 
 
+}
+
+console.log(reverse("house")); // "esuoh"
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = reverse;

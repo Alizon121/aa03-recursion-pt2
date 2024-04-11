@@ -21,9 +21,15 @@ exponent(5, 5); // 3125
 ***********************************************************************/
 
 function exponent(num, power) {
-    // Your code here 
+// Base Case
+
+
+
 }
   
+console.log(exponent(3, 2)); // 9
+// console.log(exponent(2, -2)); // 1/4 (or 0.25)
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
     module.exports = exponent;
