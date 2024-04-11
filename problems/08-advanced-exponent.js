@@ -38,12 +38,36 @@ For each of the examples above, figure out how many times your code should
 be recursively calling `advancedExponent`. Find a way to visually see how many
 times `advancedExponent` is being recursively called.
 ***********************************************************************/
-
-
-function advancedExponent(b, n) {
-  // Your code here 
+function exponent(num, power) {
+// Base Case
+if (power === 0) {
+  return 1;
+} else {
+  if (num > 0) {
+     return num * exponent(num, power - 1)
+  } else {
+      num = 1/num
+       return num * exponent(num, power + 1)
+  }
 }
 
+}
+
+function advancedExponent(b, n) {
+    //Base Case
+    debugger
+    if (n === 0) {
+      return 1;
+    } else {
+      if (n % 2 === 0) {
+        exponent(b, n / 2) ** 2
+      } else {
+        b * (exponent(b, (n - 1) / 2) ** 2)
+      }
+    }
+}
+
+console.log(advancedExponent(2, 3)); // 8
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

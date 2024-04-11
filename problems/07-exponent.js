@@ -24,14 +24,13 @@ function exponent(num, power) {
     debugger
 // Base Case
 if (power === 0) {
-    return num;
+    return 1;
 } else {
     if (num > 0) {
-         num =  num * num 
-       return exponent(num, power - 1)
+       return num * exponent(num, power - 1)
     } else {
-         num = (1 / num) * (1 / num) 
-         return exponent(num, power + 1)
+        num = 1/num
+         return num * exponent(num, power + 1)
     }
 }
 
